@@ -1,0 +1,254 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: burlywood;
+}
+
+.title,
+.count{
+    display: flex;
+    color: darkmagenta;
+    justify-content: center;
+    font-size: 30px;
+}
+
+.score{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.player,.p-score,.computer,.c-score{
+    display: flex;
+    justify-content: center;
+    color: darkmagenta;
+    font-size: 20px;
+    font-weight: bold;
+  
+}
+
+.guide{
+    margin: 0px;
+    padding: 0px;
+}
+
+.guide,
+.instruction{
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    color: darkmagenta;
+}
+
+.count{
+    color: blue;
+    padding: 5px;
+    margin: 5px;
+}
+
+.images{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 200px 200px;
+    grid-column-gap: 80px;
+}
+
+.hand{
+    background-color:antiquewhite ;
+    border-radius: 50%;
+    width: 140px;
+    height: 140px;
+    margin: 40px;
+}
+
+.pHand{
+    transform: rotateY(180deg);
+}
+
+.para{
+    margin:5px;
+}
+
+.buttons, 
+.choices{
+    display: flex;
+    justify-content: center;
+}
+
+.choices{
+    color: darkmagenta;
+    margin: 0px;
+    padding: 0px;
+}
+
+.choice{
+    font-size: 0;
+    width: 50px;
+    height: 50px;
+    background-size: cover;
+    outline: none;
+    border-radius: 50%;  
+    margin: 20px;
+}
+
+.rock{
+    background-image: url('./images/rock.png');
+}
+
+.paper{
+    background-image: url('./images/paper.png');
+}
+
+.scissors{
+    background-image: url('./images/scissors.png');
+}
+
+.rock{
+    left: 40%;
+}
+
+.scissors{
+    right: 40%;
+}
+
+.screen,
+.end-screen{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+}
+
+.intro-content,
+.end-content{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.intro,
+.end{
+    background-color: lightyellow;
+    position: relative;
+    top: 15%;
+    opacity: 0.8;
+}
+
+.pName,
+.start,
+.name,
+.winner,
+.restart,
+.totalWin{
+    font-weight: bold;
+    color: darkred;
+    margin: 10px;
+}
+
+.name,
+.pName{
+    text-align: center;
+}
+
+.start,
+.restart{
+    background-color: white;
+    border-color: darkslateblue;
+}
+
+section.fadeOut{
+    opacity: 0;
+    pointer-events: none;
+}
+
+section.fadeIn{
+    opacity: 1;
+    pointer-events: all;
+}
+
+@media only screen and (max-width: 750px){
+    .choice{
+        width: 48px;
+        height: 48px;
+    }
+}
+
+@media only screen and (max-width: 550px){
+    .hand{
+        width: 100px;
+        height: 110px;
+    }
+    .rock{
+        left: 35%;
+    }
+    .scissors{
+        right: 35%;
+    }
+    .instruction,
+    .guide{
+        font-size: 15px;
+        font-weight: bold;
+    }
+}
+
+@keyframes shakePlayer{
+    0%{
+        transform: rotateY(180deg) translateY(0px);
+    }
+    15%{
+        transform: rotateY(180deg) translateY(-50px);
+    }
+    25%{
+        transform: rotateY(180deg) translateY(0px);
+    }
+    35%{
+        transform: rotateY(180deg) translateY(-50px);
+    }
+    45%{
+        transform: rotateY(180deg) translateY(0px);
+    }
+    65%{
+        transform: rotateY(180deg) translateY(-50px);
+    }
+    75%{
+        transform: rotateY(180deg) translateY(0px);
+    }
+    85%{
+        transform: rotateY(180deg) translateY(-50px);
+    }
+    100%{
+        transform: rotateY(180deg) translateY(0px);
+    }
+}
+
+@keyframes shakeComputer{
+    0%{
+        transform: translateY(0px);
+    }
+    15%{
+        transform:  translateY(-50px);
+    }
+    25%{
+        transform: translateY(0px);
+    }
+    35%{
+        transform: translateY(-50px);
+    }
+    45%{
+        transform:  translateY(0px);
+    }
+    65%{
+        transform: translateY(-50px);
+    }
+    75%{
+        transform: translateY(0px);
+    }
+    85%{
+        transform: translateY(-50px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assignment.css">
+    <script defer src="app.js"></script>
+    <title>Game</title>
+</head>
+
+<body>
+    <section class="match fadeOut">
+        <h1 class='title'>Rock, Paper & Scissors </h1>
+        <div class='score'>
+            <div>
+                <p class='player'></p>
+                <p class='p-score'>0</p>
+            </div>
+            <div>
+                <p class='computer'>Computer Score</p>
+                <p class='c-score'>0</p>
+            </div>
+        </div>
+        <p class="guide">Instruction for keyboard input:</p>
+        <div class='instruction'>
+            <p class="para">For rock: Press A,</p>
+            <p class="para"> For paper: Press S,</p>
+            <p class="para">& For scissors: Press F</p>
+        </div>
+        <p class='count'>Good luck!</p>
+        <div class='images'>
+            <div>
+                <img class='hand pHand' src='./images/rock.png' alt='image of rock' />
+            </div>
+            <div>
+                <img class='hand cHand' src='./images/rock.png' alt='image of rock' />
+            </div>
+        </div>
+        <div class="buttons">
+            <button class='choice rock'>rock</button>
+            <button class='choice paper'>paper</button>
+            <button class='choice scissors'>scissors</button>
+        </div>
+        <h1 class="choices">User choices</h1>
+    </section>
+    <section class="screen">
+        <div class="intro">
+            <div class="intro-content">
+                <p class='pName'>Enter Player name:</p>
+                <input type='text' placeholder='Name' class='name'>
+                <button class="start">Let's Play</button>
+            </div>
+        </div>
+    </section>
+    <section class="end-screen fadeOut">
+        <div class='end'>
+            <div class="end-content">
+                <p class='winner'></p>
+                <p class="totalWin"></p>
+                <button class='restart'>Play Again</button>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
